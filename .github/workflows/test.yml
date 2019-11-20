@@ -20,6 +20,7 @@ jobs:
         echo $PATH
     - name: Test CTeX
       run: |
+        export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
         echo $PATH
         ls -al /tmp/texlive/bin/x86_64-linux
         pwd
