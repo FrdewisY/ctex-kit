@@ -25,13 +25,9 @@ jobs:
         pwd
         ls -al
         cd ctex
-        which l3build
         l3build --version
-        which tex
         tex --vesion
-        which xetex
         xetex --version
-        which luatex
         luatex --credits
         pwd
         l3build unpack
