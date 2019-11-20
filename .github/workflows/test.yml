@@ -9,8 +9,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install TeX Live
       run: |
-        pwd
-        ls -al
         export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
         wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
         tar -xzf install-tl-unx.tar.gz
@@ -22,10 +20,20 @@ jobs:
         echo $PATH
     - name: Test CTeX
       run: |
+        echo $PATH
+        ls -al /tmp/texlive/bin/x86_64-linux
         pwd
         ls -al
         cd ctex
         which l3build
+        l3build --version
+        which tex
+        tex --vesion
+        which xetex
+        xetex --version
+        which luatex
+        luatex --credits
+        pwd
         l3build unpack
         l3build check
 
