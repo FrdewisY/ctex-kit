@@ -27,7 +27,7 @@ jobs:
         ls -al
         cd ctex
         l3build --version
-        tex --vesion
+        tex --version
         xetex --version
         luatex --credits
         pwd
